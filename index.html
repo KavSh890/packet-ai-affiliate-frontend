@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>packet.ai Affiliates</title>
+    <script>
+    !function(){var B="https://packet-ai-affiliate-backend.vercel.app",D=30;function S(n,v,d){var e=new Date(Date.now()+d*864e5).toUTCString();document.cookie=n+"="+encodeURIComponent(v)+"; expires="+e+"; path=/; SameSite=Lax"}var p=new URLSearchParams(window.location.search),a=p.get("via");if(a){a=a.toLowerCase().trim();fetch(B+"/api/track-click",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({affiliate_code:a,landing_page:window.location.href,referrer:document.referrer||null})}).then(r=>r.json()).then(d=>{if(d.click_id){S("pkt_ref",a,D);S("pkt_cid",d.click_id,D);S("pkt_cat",d.clicked_at||new Date().toISOString(),D)}}).catch(()=>{S("pkt_ref",a,D);S("pkt_cat",new Date().toISOString(),D)})}}();
+    </script>
   </head>
   <body>
     <div id="root"></div>
